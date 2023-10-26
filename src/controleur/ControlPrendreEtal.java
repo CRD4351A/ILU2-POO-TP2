@@ -13,34 +13,28 @@ public class ControlPrendreEtal {
 	}
 
 	public boolean resteEtals() {
-		//TODO a completer, attention le retour ne dit pas etre false :-)
-		if(village.rechercherEtalVide())
-		{
-			return true;
-		}
-		return false;
-	}
 
+		
+		
+			
+		
+		
+		
+		return village.rechercherEtalVide();
+		
+	}
 	public int prendreEtal(String nomVendeur, String produit, int nbProduit) {
-		//TODO a completer
-		if(village.trouverHabitant(nomVendeur)==null)
-		{
-			return village.donnerNbEtal();
-		}
-		else
-		{
-			village.installerVendeur(village.trouverHabitant(nomVendeur), produit, nbProduit);
-			return village.donnerNbEtal();
-		}
+	
+		
+		return village.installerVendeur(village.trouverHabitant(nomVendeur), produit, nbProduit)+1;
 	}
 
 	public boolean verifierIdentite(String nomVendeur) {
-		//TODO a completer, attention le retour ne dit pas etre false :-)
-		if(village.trouverHabitant(nomVendeur)==null)
-		{
-			return false;
+		
+		 return controlVerifierIdentite.verifierIdentite(nomVendeur);
+		
+			
 		}
-		village.rechercherEtal(village.trouverHabitant(nomVendeur));
-		return true;
 	}
-}
+
+
